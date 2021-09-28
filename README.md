@@ -1,12 +1,5 @@
 # Использование:
 
-## 1. Создаем объект класса PDO и передаем в его аргументы 
-```php
-$pdo = new PDO(...);
-$db = new QueryBuilder($pdo);
-```
-
-## 2. Выполням запрос
 
 ```php 
 $db->getAll(string $table): array
@@ -15,7 +8,7 @@ $db->getAll(string $table): array
 $db->getOne(string $table, int $id): array
 //Возвращает запись с указанным id из таблицы table
 
-$db->create(string $table, array $data) 
+$db->insert(string $table, array $data) 
 //Создает новую запись в таблице table из массива data
 
 $db->update(string $table, array $data, int $id)
